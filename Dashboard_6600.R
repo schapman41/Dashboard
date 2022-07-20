@@ -274,7 +274,7 @@ server = function(input, output){
   output$plot4 = renderPlot({
     ggplot(doc_scores, aes(y=Severe.Illness.Survival.Score, x=Doctor_ID))+
       geom_bar(stat = "identity",fill = "light blue") +
-      labs(title="Severe Illness Score", x="Physician", y="Min-Max Severe Illness Score") +
+      labs(title="Severe Illness Score", x="Physician", y="Severe Illness Rate") +
       theme_classic() + theme(text = element_text(size = 12)) +
       theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
   })
