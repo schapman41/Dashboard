@@ -229,7 +229,7 @@ server = function(input, output){
     else if(input$doc == "doc_24"){df = doc_24}
     else{df = doc_25}
     ggplot(df,aes(day,SOFA)) + geom_point() + 
-      geom_smooth(method="lm", se=F, fullrange = T) + theme_classic() +
+      geom_jitter(aes(colour = PtID)) + theme_classic() +
       theme(text = element_text(size = 12)) +
       labs(title=paste(input$doc, "Overall Patient Trajectory"), x="day", y="SOFA")
     })
